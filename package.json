@@ -1,0 +1,23 @@
+{
+  "name": "vue-sample",
+  "version": "1.0.0",
+  "description": "Vue sample with grunt.",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaric/vue-sample.git"
+  },
+  "author": "Aaric",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aaric/vue-sample/issues"
+  },
+  "homepage": "https://github.com/aaric/vue-sample#readme",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-vue": "^0.1.5"
+  }
+}
