@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Sample09</title>
+</head>
+<body>
+    <div id="app">
+        <p><span v-once>这个将不会改变: {{ msg }}</span></p>
+        <p><span>{{ msg.split('').reverse().join('') }}</span></p>
+        <p><span>{{ null != msg? 'yes': 'no'}}</span></p>
+        <p>{{ rawHtml }}</p>
+        <p v-html="rawHtml"></p>
+        <p><button v-bind:disabled="isButtonDisabled">Button</button></p>
+        <p>
+            <a v-bind:href='url' target="_blank">syntax</a><br>
+            <a :href="url" target="_blank">syntax</a>
+        </p>
+        <p>
+            <a v-on:click="doSomething" href="javascript:void(0)">click</a><br>
+            <a @click="doSomething" href="javascript:void(0)">click</a>
+        </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                msg: 'Hello World',
+                rawHtml: '<i>html</i>',
+                isButtonDisabled: true,
+                url: 'https://cn.vuejs.org/v2/guide/syntax.html'
+            },
+            methods: {
+                doSomething: function() {
+                    console.log('click')
+                }
+            }
+        })
+    </script>
+</body>
+</html>
