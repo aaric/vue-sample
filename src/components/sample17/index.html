@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Sample17</title>
+</head>
+<body>
+    <div id="app">
+        <ol>
+            <li>
+                <my-component1 v-on:click.native="doTheThing">
+                </my-component1>
+            </li>
+            <li>
+                <my-component2></my-component2>
+            </li>
+            <li>
+                <table>
+                    <tr is="my-row"></tr>
+                </table>
+            </li>
+            <li>
+                <simple-counter></simple-counter>
+                <simple-counter></simple-counter>
+                <simple-counter></simple-counter>
+            </li>
+            <li>
+                <my-message my-message="hello"></my-message>
+            </li>
+            <li>
+                <input v-model="parentMsg">
+                <br>
+                <my-message v-bind:my-message="parentMsg">
+                </my-message>
+            </li>
+            <li>
+                <todo-item v-bind="todo"></todo-item>
+                <todo-item v-bind:text="todo.text"
+                    v-bind:is-complete="todo.isComplete">
+                </todo-item>
+            </li>
+            <li>
+                <p>{{ total }}</p>
+                <button-counter v-on:increment="incrementTotal">
+                </button-counter>
+                <button-counter v-on:increment="incrementTotal">
+                </button-counter>
+            </li>
+        </ol>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        function doTheThing() {
+            alert('nothing')
+        }
+
+        Vue.component('my-component1', {
+            template: '<div>A custom component 1!</div>'
+        })
+
+        Vue.component('my-row', {
+            template: '<tr><td>hello</td><td>world</td></tr>'
+        })
+
+        Vue.component('simple-counter', {
+            template: '<button v-on:click="counter += 1">{{ counter }}</button>',
+            data: function() {
+                return {
+                    counter: 0
+                }
+            }
+        })
+
+        Vue.component('my-message', {
+            props: ['myMessage'],
+            template: '<i>{{ myMessage }}</i>'
+        })
+
+        Vue.component('todo-item', {
+            props: ['text', 'isComplete'],
+            template: '<div>{{ text }} - {{ isComplete }}</div>'
+        })
+
+        Vue.component('example', {
+            props: {
+                propA: Number,
+                propB: [String, Number],
+                propC: {
+                    type: String,
+                    required: true
+                },
+                propD: {
+                    type: Number,
+                    default: 100
+                },
+                propE: {
+                    type: Object,
+                    default: function () {
+                        return {
+                            message: 'hello'
+                        }
+                    }
+                },
+                propF: {
+                    validator: function (value) {
+                        return value > 10
+                    }
+                }
+            },
+            template: '<div>{{ propA }} - {{ propB }} - {{ propC }} - {{ propD }} - {{ propE }} - {{ propF }}</div>'
+        })
+
+        Vue.component('button-counter', {
+            template: '<button v-on:click="incrementCounter">{{ counter }}</button>',
+            data: function () {
+                return {
+                    counter: 0
+                }
+            },
+            methods: {
+                incrementCounter: function () {
+                    this.counter += 1
+                    this.$emit('increment')
+                }
+            },
+        })
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello World',
+                parentMsg: 'parent msg',
+                todo: {
+                    text: 'Learn Vue',
+                    isComplete: false
+                },
+                total: 0
+            },
+            methods: {
+                incrementTotal: function () {
+                    this.total += 1
+                }
+            },
+            components: {
+                'my-component2': {
+                    template: '<div>A custom component 2!</div>'
+                }
+            }
+        })
+    </script>
+</body>
+</html>
