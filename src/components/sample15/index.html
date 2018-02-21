@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Sample15</title>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <button v-on:click="counter += 1">Add 1</button>
+            <p>The button above has been clicked {{ counter }} times.</p>
+        </div>
+        <div>
+            <button v-on:click="greet">Greet</button>
+        </div>
+        <div>
+            <button v-on:click="say('hi')">Say hi</button>
+            <button v-on:click="say('what')">Say what</button>
+        </div>
+        <div>
+            <button v-on:click="warn('Form cannot be submitted yet.', $event)">Submit</button>
+        </div>
+        <div>
+            <a v-on:click.once="doThis()">doThis</a>
+        </div>
+        <div>
+            <input v-on:keyup.13="say('enter')" placeholder="enter">
+            <input v-on:keyup.enter="say('enter')" placeholder="enter">
+            <input @keyup.esc="say('esc')" placeholder="esc">
+            <input @keyup.f1="say('f1')" placeholder="f1">
+            <input @keyup.meta="say('⌘')" placeholder="⌘">
+            <input @keyup.ctrl.exact="say('ctrl')" placeholder="ctrl">
+            <input @keyup.alt.67="say('alt + c')" placeholder="alt + c">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        Vue.config.keyCodes.f1 = 112
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                name: 'Vue.js',
+                counter: 0
+            },
+            methods: {
+                greet: function (event) {
+                    alert('Hello ' + this.name + '!')
+                    if (event) {
+                        alert(event.target.tagName)
+                    }
+                },
+                say: function (message) {
+                    alert(message)
+                },
+                warn: function (message, event) {
+                    if (event) {
+                        event.preventDefault()
+                    }
+                    alert(message)
+                },
+                doThis: function() {
+                    alert('doThis')
+                }
+            }
+        })
+    </script>
+</body>
+</html>
