@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Sample16</title>
+</head>
+<body>
+    <div id="app">
+        <ol>
+            <li>
+                <input v-model="message" placeholder="edit me">
+                <p>Message is: {{ message }}</p>
+            </li>
+            <li>
+                <span>Multiline message is:</span>
+                <p style="white-space: pre-line;">{{ message }}</p>
+                <br>
+                <textarea v-model="message" placeholder="add multiple lines"></textarea>
+            </li>
+            <li>
+                <input type="checkbox" id="checkbox" v-model="checked">
+                <label for="checkbox">{{ checked }}</label>
+            </li>
+            <li>
+                <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+                <label for="jack">Jack</label>
+                <input type="checkbox" id="john" value="John" v-model="checkedNames">
+                <label for="john">John</label>
+                <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+                <label for="mike">Mike</label>
+                <br>
+                <span>Checked names: {{ checkedNames }}</span>
+            </li>
+            <li>
+                <input type="radio" id="one" value="One" v-model="picked">
+                <label for="one">One</label>
+                <br>
+                <input type="radio" id="two" value="Two" v-model="picked">
+                <label for="two">Two</label>
+                <br>
+                <span>Picked: {{ picked }}</span>
+            </li>
+            <li>
+                <select v-model="selected">
+                    <option disabled value="">请选择</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+                <span>Selected: {{ selected }}</span>
+            </li>
+            <li>
+                <select v-model="multipled" multiple style="width: 50px;">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+                <br>
+                <span>Selected: {{ multipled }}</span>
+            </li>
+            <li>
+                <input type="checkbox"
+                    v-model="toggle"
+                    true-value="yes"
+                    false-value="no"
+                >
+            </li>
+            <li>
+                <input v-model.lazy="message" ><br>
+                <input v-model.trim="message"><br>
+                <input v-model.number="age" type="number"><br>
+            </li>
+        </ol>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello World',
+                checked: false,
+                checkedNames: [],
+                picked: [],
+                selected: '',
+                multipled: [],
+                toggle: 'yes',
+                age: 15
+            }
+        })
+    </script>
+</body>
+</html>
