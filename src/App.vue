@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <usage-fetch />
+    <usage-axios />
   </div>
 </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
-import UsageFetch from './components/UsageFetch.vue'
+//import UsageFetch from './components/UsageFetch.vue'
+import UsageAxios from './components/UsageAxios.vue';
 
 export default {
   name: 'app',
   components: {
     //HelloWorld
-    UsageFetch
+    //UsageFetch
+    UsageAxios
   }
 }
 </script>

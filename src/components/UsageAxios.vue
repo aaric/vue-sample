@@ -20,33 +20,33 @@
   </div>
 </template>
 <script>
-// http://jsonplaceholder.typicode.com/guide.html
+// http://www.axios-js.com/docs/
+import axios from 'axios';
+
 export default {
   data() {
     return {
-      msg: 'hello fetch!',
+      msg: 'hello axios!',
       user: {},
       users: []
     };
   },
   mounted() {
     // GET
-    /*fetch('https://jsonplaceholder.typicode.com/posts)
-      .then(response => response.json())
-      .then(json => (this.users = json))*/
+    /*var _this = this;
+    axios.get('https://jsonplaceholder.typicode.com/posts')
+      .then(function(response) {
+        _this.users = response.data
+      });*/
   },
   methods: {
     add: function() {
       // POST
-      fetch('https://jsonplaceholder.typicode.com/posts', {
-        method: 'POST',
-        body: JSON.stringify(this.user),
-        headers: {
-          'Content-type': 'application/json;charset=UTF-8'
-        }
-      })
-      .then(response => response.json())
-      .then(json => this.users.unshift(this.user));
+      var _this = this;
+      axios.post('https://jsonplaceholder.typicode.com/posts', this.user)
+        .then(function(response) {
+          _this.users.unshift(_this.user);
+        });
     }
   }
 };
