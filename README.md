@@ -39,12 +39,13 @@ Icon: D:\Portable Files\VSCode\Code.exe, 0
 ```
 
 ### 2.3 `HKEY_CLASSESS_ROOT/*/Shell/Open with VSCode/command`
+
 ```vim
 default: "D:\Portable Files\VSCode\Code.exe" "%1"
 ```
 
 
-## 3. VSCode Support Vue Development Plugins
+## 3. VSCode推荐插件列表
 
 1. Auto Close Tag  -- 自动闭合HTML/XML标签
 2. Auto Rename Tag  -- 自动完成另一侧标签的同步修改
