@@ -45,7 +45,7 @@ default: "D:\Portable Files\VSCode\Code.exe" "%1"
 ```
 
 
-## 3. VSCode推荐插件列表
+## 3. 推荐VSCode插件列表
 
 1. Auto Close Tag  -- 自动闭合HTML/XML标签
 2. Auto Rename Tag  -- 自动完成另一侧标签的同步修改
