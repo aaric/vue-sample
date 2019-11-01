@@ -6,7 +6,8 @@
     <!-- <usage-axios /> -->
     <!-- <usage-emit /> -->
     <!-- <payment /> -->
-    <usage-slot />
+    <!-- <usage-slot /> -->
+    <usage-ka />
   </div>
 </template>
 
@@ -16,7 +17,8 @@
 // import UsageAxios from './components/UsageAxios.vue'
 // import UsageEmit from './components/UsageEmit.vue'
 // import Payment from './components/Payment.vue'
-import UsageSlot from './components/UsageSlot.vue'
+// import UsageSlot from './components/UsageSlot.vue'
+import UsageKa from './components/UsageKa.vue'
 
 export default {
   name: "app",
@@ -26,7 +28,8 @@ export default {
     // UsageAxios
     // UsageEmit
     // Payment
-    UsageSlot
+    // UsageSlot
+    UsageKa
   }
 };
 </script>
