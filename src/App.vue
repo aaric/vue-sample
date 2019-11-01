@@ -4,7 +4,9 @@
     <!-- <hello-world /> -->
     <!-- <usage-fetch /> -->
     <!-- <usage-axios /> -->
-    <usage-emit />
+    <!-- <usage-emit /> -->
+    <!-- <payment /> -->
+    <usage-slot />
   </div>
 </template>
 
@@ -12,7 +14,9 @@
 // import HelloWorld from './components/HelloWorld.vue'
 // import UsageFetch from './components/UsageFetch.vue'
 // import UsageAxios from './components/UsageAxios.vue'
-import UsageEmit from './components/UsageEmit.vue'
+// import UsageEmit from './components/UsageEmit.vue'
+// import Payment from './components/Payment.vue'
+import UsageSlot from './components/UsageSlot.vue'
 
 export default {
   name: "app",
@@ -20,7 +24,9 @@ export default {
     // HelloWorld
     // UsageFetch
     // UsageAxios
-    UsageEmit
+    // UsageEmit
+    // Payment
+    UsageSlot
   }
 };
 </script>
