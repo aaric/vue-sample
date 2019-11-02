@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <h1>App.vue</h1>
-    <router-foo />
-    <router-bar />
   </div>
 </template>
 
 <script>
-import RouterFoo from './components/RouterFoo.vue'
-import RouterBar from './components/RouterBar.vue'
+import Home from '@/components/Home.vue'
+import HomeAbout from '@/components/HomeAbout.vue'
 
 export default {
   name: "app",
+  routes: [
+    {path: 'home', component: Home},
+    {path: 'homeabout', component: HomeAbout},
+  ],
   components: {
-    RouterFoo,
-    RouterBar
   }
 };
 </script>

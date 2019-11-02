@@ -7,7 +7,7 @@
 export default {
   data() {
     return {
-      msg: 'RouterFoo.vue'
+      msg: 'HomeAbout.vue'
     }
   }
 }

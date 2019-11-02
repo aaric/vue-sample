@@ -7,7 +7,7 @@
 export default {
   data() {
     return {
-      msg: 'RouterBar.vue'
+      msg: 'Home.vue'
     }
   }
 }
