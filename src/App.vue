@@ -1,19 +1,22 @@
 <template>
   <div id="app">
     <h1>App.vue</h1>
+    <div>
+      <h2>Links:</h2>
+      <ul>
+        <li><router-link to="/home">Home</router-link></li>
+        <li><router-link to="/home/about">HomeAbout</router-link></li>
+      </ul>
+    </div>
+    <div>
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script>
-import Home from '@/components/Home.vue'
-import HomeAbout from '@/components/HomeAbout.vue'
-
 export default {
   name: "app",
-  routes: [
-    {path: 'home', component: Home},
-    {path: 'homeabout', component: HomeAbout},
-  ],
   components: {
   }
 };
