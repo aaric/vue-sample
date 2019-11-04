@@ -5,7 +5,7 @@
       <h2>Links:</h2>
       <ul>
         <li><router-link to="/home">Home</router-link></li>
-        <li><router-link to="/home/about">HomeAbout</router-link></li>
+        <li><router-link to="/payment">Payment</router-link></li>
       </ul>
     </div>
     <div>
