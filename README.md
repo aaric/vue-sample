@@ -22,7 +22,6 @@ npm run build
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-
 ## 2. 创建VSCode右键菜单
 
 ### 2.1 PowerShell
@@ -44,7 +43,6 @@ Icon: D:\Portable Files\VSCode\Code.exe, 0
 default: "D:\Portable Files\VSCode\Code.exe" "%1"
 ```
 
-
 ## 3. 推荐VSCode插件列表
 
 1. Auto Close Tag  -- 自动闭合HTML/XML标签
@@ -53,7 +51,7 @@ default: "D:\Portable Files\VSCode\Code.exe" "%1"
 4. Bracket Pair Colorizer  -- 给括号加上不同的颜色，便于区分不同的区块
 5. Debugger for Chrome  -- 映射VSCode上的断点到Chrome上，方便调试
 6. ESLint  -- JavaScript语法纠错
-7. GitLens  -- 方便查看git日志
+7. ~~GitLens~~  -- 方便查看git日志
 8. HTML CSS Support  -- 智能提示CSS类名以及ID
 9. HTML Snippets  -- 智能提示HTML标签，以及标签含义
 10. JavaScript(ES6) code snippets  -- ES6语法智能提示，以及快速输入
@@ -66,6 +64,8 @@ default: "D:\Portable Files\VSCode\Code.exe" "%1"
 react-router语法智能提示
 17. Vetur  -- Vue多功能集成插件
 18. Chinese（Simplied） Lang  -- 中文插件
+19. Bootstrap v4 Snippets  -- Bootstrap4提示插件
+20. Document This  -- 快速添加文档注释
 
 ## 4. Notes
 
