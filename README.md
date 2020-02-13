@@ -66,6 +66,7 @@ react-router语法智能提示
 18. Chinese（Simplied） Lang  -- 中文插件
 19. Bootstrap v4 Snippets  -- Bootstrap4提示插件
 20. Document This  -- 快速添加文档注释
+21. Browser Preview  -- 浏览器预览插件
 
 ## 4. Notes
 
