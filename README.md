@@ -70,6 +70,7 @@ react-router语法智能提示
 22. REST Client  -- HTTP客户端工具
 23. Polacode-2019  -- 分享Code源码
 24. Vibrancy  -- 美化VSCode
+25. JavaScript Booster  -- 修正JS语法
 
 ## 4. Notes
 
