@@ -91,6 +91,7 @@ react-router语法智能提示
 23. Polacode-2019  -- 分享Code源码
 24. Vibrancy  -- 美化VSCode
 25. JavaScript Booster  -- 修正JS语法
+26. Ant Design Vue helper  -- Ant Design for vue
 
 ## 4. Notes
 
