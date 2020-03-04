@@ -22,6 +22,26 @@ npm run build
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+### 1.4 Extra
+
+#### 1.4.1 vue-cli
+
+```powershell
+npm install -g @vue/cli
+```
+
+#### 1.4.2 nginx+gzip
+
+```nginx
+location / {
+    root /dist;
+    index /index.html;
+    try_files $uri $uri/ /index.html;
+    gzip_static on;
+}
+```
+
+
 ## 2. 创建VSCode右键菜单
 
 ### 2.1 PowerShell
