@@ -71,7 +71,7 @@ default: "D:\Portable Files\VSCode\Code.exe" "%1"
 4. Bracket Pair Colorizer  -- 给括号加上不同的颜色，便于区分不同的区块
 5. Debugger for Chrome  -- 映射VSCode上的断点到Chrome上，方便调试
 6. ESLint  -- JavaScript语法纠错
-7. ~~GitLens~~  -- 方便查看git日志
+7. GitLens  -- 方便查看git日志
 8. HTML CSS Support  -- 智能提示CSS类名以及ID
 9. HTML Snippets  -- 智能提示HTML标签，以及标签含义
 10. JavaScript(ES6) code snippets  -- ES6语法智能提示，以及快速输入
@@ -92,6 +92,7 @@ react-router语法智能提示
 24. Vibrancy  -- 美化VSCode
 25. JavaScript Booster  -- 修正JS语法
 26. Ant Design Vue helper  -- Ant Design for vue
+27. Vibrancy -- 毛玻璃效果插件
 
 ## 4. Notes
 
