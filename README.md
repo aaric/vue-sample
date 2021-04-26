@@ -89,10 +89,10 @@ react-router语法智能提示
 21. Browser Preview  -- 浏览器预览插件
 22. REST Client  -- HTTP客户端工具
 23. Polacode-2019  -- 分享Code源码
-24. Vibrancy  -- 美化VSCode
+24. ~~Vibrancy  -- 毛玻璃效果插件~~
 25. JavaScript Booster  -- 修正JS语法
 26. Ant Design Vue helper  -- Ant Design for vue
-27. Vibrancy -- 毛玻璃效果插件
+28. Ansible Language  -- YAML语法补全和高亮插件
 
 ## 4. Notes
 
